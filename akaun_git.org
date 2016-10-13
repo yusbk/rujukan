@@ -59,3 +59,63 @@ Untuk menetapkkan git sentiasa memakai =Emacs= sebagai editor
 #+BEGIN_EXAMPLE
 git config --global core.editor emacs
 #+END_EXAMPLE
+
+* Undo atau Revert
+
+Untuk kembali ke sebelum pertukaran tetapi hanya fail-fail di direktori yang sedang
+dipakai. Cara pertama hanya menggembalikan =unstaged changes=
+
+#+BEGIN_EXAMPLE
+git checkout --l
+#+END_EXAMPLE
+
+Untuk menggembalikan pertukaran-pertukaran yang sudah =staged= dan =unstaged=
+
+#+BEGIN_EXAMPLE
+git reset --hard
+git reset --hard HEAD
+#+END_EXAMPLE
+
+Untuk membuang semua pertukaran-pertukaran lokal kerana ingin mendapatkan versi di GitHub
+
+#+BEGIN_EXAMPLE
+git reset --hard HEAD
+git pull
+
+git reset --hard a123412 #untuk id commit tertentu
+#+END_EXAMPLE
+
+Untuk /unstange/ semua fail-fail yang sudah di /stage/ melalui =git add=
+
+#+BEGIN_EXAMPLE
+git reset
+#+END_EXAMPLE
+
+Untuk menggembalikan fail tertentu atau direktori tertentu
+
+#+BEGIN_EXAMPLE
+git checkout <nama_dir atau nama_fail>
+#+END_EXAMPLE
+
+* Sekiranya ada konflik
+
+Untuk menyimpan pertukaran-pertukaran lokal sekiranya ada konflik dengan versi Github
+
+#+BEGIN_EXAMPLE
+git fetch origin
+git status
+git pull
+
+#if conflicts then?
+
+git add .
+git commit -m "message"
+git pull #ini akan bagi error message tapi tidak mengapa
+
+# buka fail yang ada konflik dan betulkan masalah konflik
+
+git add .
+git commit -m "fixed conflicts"
+git pull
+
+#+END_EXAMPLE
