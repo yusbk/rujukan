@@ -4,6 +4,27 @@
 
 #+options: toc:nil
 
+* Buat git repo dan R pakej
+
+Langkah-langkah untuk buat R pakej dan kemudiannya menghantar ke Github
+
++ Buat *repo* di Github cth. foo
++ Buat R pakej di direktori yang diinginkan
+#+BEGIN_EXAMPLE
+setwd("/path/for/package")
+devtools::create("foo")
+#+END_EXAMPLE
+
++ Masuk ke direktori /foo/
++ Hantar semua fail-fail didalam direktori /foo/ ke Github
+#+BEGIN_EXAMPLE
+git init
+git add .
+git commit -m "Mula foo"
+git remote origin git@work:ybkamaleri/foo.git
+git push -u origin master
+#+END_EXAMPLE
+
 * Pelbagai akaun
 
 Untuk memeriksa username yang dipakai
