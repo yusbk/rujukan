@@ -107,7 +107,7 @@ Now, round all corners by passing ditaa the -r,--round-corners command line swit
 [[file:~/Test/fancy-ditaa.png]]
 
 ** Fancy 2
-Letakkan =:cmdline= *-E* untuk sambungkan dua kotak
+Letakkan =:cmdline -E= untuk sambungkan dua kotak
 #+begin_src ditaa :file ~/Test/fancy-ditaa2.png :cmdline -E
       +--------+   +-------+    +-------\
       |        | --+ ditaa +--> |       |
