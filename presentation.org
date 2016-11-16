@@ -1,0 +1,36 @@
+#+TITLE: Test presentation
+#+AUTHOR: Yusman Kamaleri
+#+EMAIL: yuskam@ous-hf.no
+#+DATE: 2015-02-02
+
+
+#+OPTIONS: reveal_center:t reveal_progress:t reveal_history:nil reveal_control:t
+#+OPTIONS: reveal_rolling_links:t reveal_keyboard:t reveal_overview:t num:nil
+#+OPTIONS: reveal_width:1200 reveal_height:800
+#+OPTIONS: toc:1
+
+#+REVEAL_SLIDE-NUMBER: t
+#+REVEAL_THEME: moon
+#+REVEAL_TRANS: cube
+#+REVEAL_MARGIN: 0.2
+#+REVEAL_MIN_SCALE: 0.5
+#+REVEAL_MAX_SCALE: 2.5
+
+#+REVEAL_PLUGINS: (markdown notes)
+#+REVEAL_EXTRA_CSS: ./local.css
+
+* Point pertama
+Testing utk pembentangan
+
+#+BEGIN_NOTES
+Utk tulis tkan '<' dan 'n' kemudian TAB
+#+END_NOTES
+
+* Point kedua
+Apa yang perlu ditulis. Tekan 's' utk buka *Speaker Notes*
+Sekiranya speaker note hanya blank screens. Kopi file presentation HTML ke
+=Reveal.ja= root directory dan buka semula di browser
+
+#+BEGIN_NOTES
+Testing-- 1.2.3
+#+END_NOTES
