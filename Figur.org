@@ -90,7 +90,7 @@ Now, round all corners by passing ditaa the -r,--round-corners command line swit
 #+RESULTS:
 [[file:~/Test/ditaa-seqboxes-dot2.png]]
 
-** Fancy
+** Fancy 1
 #+begin_src ditaa :file ~/Test/fancy-ditaa.png
       +--------+   +-------+    +-------+
       |        | --+ ditaa +--> |       |
@@ -105,6 +105,23 @@ Now, round all corners by passing ditaa the -r,--round-corners command line swit
 
 #+RESULTS:
 [[file:~/Test/fancy-ditaa.png]]
+
+** Fancy 2
+Letakkan =:cmdline= *-E* untuk sambungkan dua kotak
+#+begin_src ditaa :file ~/Test/fancy-ditaa2.png :cmdline -E
+      +--------+   +-------+    +-------\
+      |        | --+ ditaa +--> |       |
+      |  Text  |   +-------+    |diagram|
+      |Document|   |!magic!|    |       |
+      |     {d}|   |       |    |       |
+      +---+----+   +-------+    \-------+
+          :                         ^
+          |       Lots of work      |
+          +-------------------------+
+#+end_src
+
+#+RESULTS:
+[[file:~/Test/fancy-ditaa2.png]]
 
 * Plantuml
 
