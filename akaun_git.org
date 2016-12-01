@@ -21,7 +21,7 @@ devtools::create("foo")
 git init
 git add .
 git commit -m "Mula foo"
-git remote origin git@work:ybkamaleri/foo.git
+git remote add origin git@work:ybkamaleri/foo.git
 git push -u origin master
 #+END_EXAMPLE
 

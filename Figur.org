@@ -172,6 +172,47 @@ BinaryTableHdu : getColumn(column)
 
 #+RESULTS:
 [[file:~/Test/plantuml01.png]]
+** Plantuml notes on messages
+
+#+BEGIN_SRC plantuml :file ~/Test/plantuml03.png
+@startuml
+Alice->Bob : hello
+note left: this is a first note
+
+Bob->Alice : ok
+note right: this is another note
+
+Bob->Bob : I am thinking
+note left
+	a note
+	can also be defined
+	on several lines
+end note
+@enduml
+#+END_SRC
+
+#+RESULTS:
+[[file:~/Test/plantuml03.png]]
+** Plantuml if/then/else keyword
+
+#+BEGIN_SRC plantuml :file ~/Test/plantuml04.png
+@startuml
+(*) --> "Initialization"
+
+if "Some Test" then
+  -->[true] "Some Activity"
+  --> "Another activity"
+  -right-> (*)
+else
+  ->[false] "Something else"
+  -->[Ending process] (*)
+endif
+
+@enduml
+#+END_SRC
+
+#+RESULTS:
+[[file:~/Test/plantuml04.png]]
 
 ** SVG file to combine with xml and html
 Tapi ndak pasti macam mana berfunksi
