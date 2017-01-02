@@ -24,6 +24,19 @@ git commit -m "Mula foo"
 git remote add origin git@work:ybkamaleri/foo.git
 git push -u origin master
 #+END_EXAMPLE
+* Kopi branch di github ke lokal
+
+Bila membuat branch dari pc lain dan ingin membuat salinan branch yang sama di pc
+lain.
+
+#+BEGIN_EXAMPLE
+git checkout -b [new-branch-lokal] [remote]/[branch-remote]
+#+END_EXAMPLE
+
+Contohnya
+#+BEGIN_EXAMPLE
+git checkout -b new_func_pc2 origin/func_pc1
+#+END_EXAMPLE
 
 * Pelbagai akaun
 
