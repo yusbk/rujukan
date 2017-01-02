@@ -40,6 +40,8 @@ git checkout -b new_func_pc2 origin/func_pc1
 
 * Pelbagai akaun
 
+Untuk membuat pelbagai *SSH* akaun sila rujuk [[https://gist.github.com/jexchan/2351996][Create mulitple SSH accounts]]
+
 Untuk memeriksa username yang dipakai
 
 #+BEGIN_EXAMPLE
