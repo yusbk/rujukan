@@ -24,6 +24,8 @@ git commit -m "Mula foo"
 git remote add origin git@work:ybkamaleri/foo.git
 git push -u origin master
 #+END_EXAMPLE
+
+Sila rujuk di [[https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/][GitHub Guides]] untuk penerangan selajutnya
 * Kopi branch di github ke lokal
 
 Bila membuat branch dari pc lain dan ingin membuat salinan branch yang sama di pc
