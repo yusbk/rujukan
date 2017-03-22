@@ -1,13 +1,14 @@
 #+Title: Pelbagai tips utk Linux
+----
 * Kopi file ke folder baru
-Cara utk kopi file ke folder baru dan sekiranya folder tidak wujud akan di buat
+Cara utk kopi file ke folder baru dan sekiranya folder tidak wujud akan di buat.
 
 Contoh ini akan kopi file ke folder =baru=. Sekirannya tidak wujud akan buat folder tersebut
 #+BEGIN_EXAMPLE
   rsync -a namafile path/destinasi/baru
 #+END_EXAMPLE
 
-Cara lain ialah dengan menggabungkan =mkdir= dan =cp=. Tambahan ="$_"= digunakan
+Cara lain ialah dengan menggabungkan =mkdir= dan =cp=. Tambahan ~"$_"~ digunakan
 untuk memakai arahan =/foo/bar= semula
 #+BEGIN_EXAMPLE
 mkdir -p /foo/bar && cp myfile "$_"
