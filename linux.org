@@ -1,5 +1,5 @@
 #+Title: Pelbagai tips utk Linux
-----
+\\
 * Kopi file ke folder baru
 Cara utk kopi file ke folder baru dan sekiranya folder tidak wujud akan di buat.
 
