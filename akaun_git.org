@@ -44,6 +44,39 @@ git checkout -b new_func_pc2 origin/func_pc1
 
 Untuk membuat pelbagai *SSH* akaun sila rujuk [[https://gist.github.com/jexchan/2351996][Create mulitple SSH accounts]]
 
+Contoh untuk buat =ssh-key=. Tetapkan kekunci utk personal dan kerja seperti dibawah
+dan biarkan kosong utk passphrase
+
+#+begin_example
+ssh-keygen -t rsa -C "your-email-here"
+
+Enter file in which to save the key (/Users/ra/.ssh/id_rsa): /home/yus/.ssh/id_rsa_work
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+#+end_example
+
+Buka =id_rsa_work.pub= di gedit dan kopi kekunci untuk di masukkan ke Github SSH-key
+
+Kemudian daftarkan ssh-key
+
+#+begin_example
+ssh-add -K /path/to/private/key/file
+#+end_example
+
+Untuk tambah di fail =.ssh/config= ialah
+
+#+BEGIN_EXAMPLE
+Host personal
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_personal
+
+Host work
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_work
+#+END_EXAMPLE
+
 Untuk memeriksa username yang dipakai
 
 #+BEGIN_EXAMPLE
