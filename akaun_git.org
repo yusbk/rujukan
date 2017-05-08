@@ -65,7 +65,6 @@ git add nama_fail
 git commit -m "maklumat"
 git push -u origin-personal master
 #+END_EXAMPLE
-
 * Buat Repo melalui terminal
 
 Untuk buat repo kosong di Github sebelum memulakan projek perkongsian. =bare= harus
@@ -81,6 +80,18 @@ Kemudian semua yang terlibat utk membangunkan =repo= boleh mengkelon =repo= ters
 git clone ssh://user@host/path/to/repo.git
 #+END_EXAMPLE
 
+* Padam branch
+Untuk padamkan lokal branch
+
+#+BEGIN_EXAMPLE
+git branch -d <nama branch>
+#+END_EXAMPLE
+
+Untuk padamkan remote branch
+
+#+BEGIN_EXAMPLE
+git push origin --delete <nama branch>
+#+END_EXAMPLE
 * Git Aliases
 
 Git aliases yang selalu dipakai
