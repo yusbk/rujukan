@@ -25,7 +25,7 @@ graph graphname {
 [[file:~/Test/example1.png]]
 
 - Kdot use dot layout. The other layouts you can try are Kneato, Kcirco, Ktwopi, Kfdp
-  and Ksfdp for different layouts. The command line for these can be found [[http://graphviz.org/content/command-line-invocation][here]]
+  and Ksfdp for different layouts. The command line for these can be found [[http://svitsrv25.epfl.ch/R-doc/library/Rgraphviz/html/GraphvizLayouts.html][here]] and [[http://graphviz.org/content/command-line-invocation][here]]
 - Tpng render as png
 
 
