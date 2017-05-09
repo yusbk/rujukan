@@ -1,0 +1,110 @@
+% Created 2016-11-16 on. 17:22
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Yusman Kamaleri}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Yusman Kamaleri},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 24.5.1 (Org mode 8.3.4)},
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{Artist mode}
+\label{sec:org764259d}
+Untuk bantuan buat kotak2 lebih cepat. \texttt{Artist mode} diaktivkan di Org bila masuk ke \emph{source code}.
+
+\begin{verbatim}
+#+BEGIN_SRC ditaa :file ~/folder/file.png
+
+#+END_SRC
+\end{verbatim}
+
+Tekan butang tengah di tetikus utk dapatkan pilihan cth kotak, garis dll
+
+\section{Basic Dot}
+\label{sec:org678538a}
+\includegraphics[width=.9\linewidth]{/home/yuskam/Test/example1.png}
+
+-Kdot use dot layout. The other layouts you can try are Kneato, Kcirco, Ktwopi, Kfdp and Ksfdp for different layouts
+-Tpng render as png
+
+\section{Basic Ditaa}
+\label{sec:org212a151}
+
+\subsection{Basic}
+\label{sec:org33b067d}
+\includegraphics[width=.9\linewidth]{/home/yuskam/Test/hello-world.png}
+
+\subsection{Round corners}
+\label{sec:org9df906e}
+Now, round all corners by passing ditaa the -r,--round-corners command line switch.
+
+\includegraphics[width=.9\linewidth]{/home/yuskam/Test/hello-world-round.png}
+
+\subsection{Stright line}
+\label{sec:org65e1f35}
+\includegraphics[width=.9\linewidth]{/home/yuskam/Test/ditaa-seqboxes-line.png}
+
+\subsection{Doted line}
+\label{sec:orgae2bfe9}
+\includegraphics[width=.9\linewidth]{/home/yuskam/Test/ditaa-seqboxes-dot2.png}
+
+\subsection{Fancy 1}
+\label{sec:orga51067c}
+\includegraphics[width=.9\linewidth]{/home/yuskam/Test/fancy-ditaa.png}
+
+\subsection{Fancy 2}
+\label{sec:org80e947a}
+Letakkan \texttt{:cmdline -E} untuk sambungkan dua kotak
+\includegraphics[width=.9\linewidth]{/home/yuskam/Test/fancy-ditaa2.png}
+
+\section{Plantuml}
+\label{sec:org12fcb9f}
+
+\subsection{PNG file}
+\label{sec:org5adf10e}
+\includegraphics[width=.9\linewidth]{/home/yuskam/Test/class_diagram.png}
+
+
+\includegraphics[width=.9\linewidth]{/home/yuskam/Test/plantuml01.png}
+\subsection{Plantuml notes on messages}
+\label{sec:orgef57db3}
+
+\includegraphics[width=.9\linewidth]{/home/yuskam/Test/plantuml03.png}
+\subsection{Plantuml if/then/else keyword}
+\label{sec:org654c2ad}
+
+\includegraphics[width=.9\linewidth]{/home/yuskam/Test/plantuml04.png}
+
+\subsection{SVG file to combine with xml and html}
+\label{sec:org74abfa4}
+Tapi ndak pasti macam mana berfunksi
+
+\begin{HTML}
+<div style="text-align: center;">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><svg xmlns="\url{http://www.w3.org/2000/svg}" xmlns:xlink="\url{http://www.w3.org/1999/xlink}" height="250px" style="width:470px;height:250px;" version="1.1" viewBox="0 0 470 250" width="470px"><defs><filter height="300\%" id="f1" width="300\%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><ellipse cx="40" cy="34.2969" fill="\#FEFECE" filter="url(\#f1)" rx="8" ry="8" style="stroke: \#A80036; stroke-width: 2.0;"/><path d="M40,42.2969 L40,69.2969 M27,50.2969 L53,50.2969 M40,69.2969 L27,84.2969 M40,69.2969 L53,84.2969 " fill="\#FEFECE" filter="url(\#f1)" style="stroke: \#A80036; stroke-width: 2.0;"/><text fill="\#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="28" x="26" y="104.292">Kimi</text><text fill="\#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="60" x="10" y="20.9951">«Robot»</text><ellipse cx="40" cy="179.2969" fill="\#FEFECE" filter="url(\#f1)" rx="8" ry="8" style="stroke: \#A80036; stroke-width: 2.0;"/><path d="M40,187.2969 L40,214.2969 M27,195.2969 L53,195.2969 M40,214.2969 L27,229.2969 M40,214.2969 L53,229.2969 " fill="\#FEFECE" filter="url(\#f1)" style="stroke: \#A80036; stroke-width: 2.0;"/><text fill="\#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="17" x="31.5" y="249.292">Ivy</text><text fill="\#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="68" x="6" y="165.9951">«Human»</text><ellipse cx="381.1501" cy="70.7688" fill="\#FEFECE" filter="url(\#f1)" rx="82.6501" ry="23.7688" style="stroke: \#A80036; stroke-width: 1.5;"/><text fill="\#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="50" x="356.1501" y="63.8464">«Main»</text><text fill="\#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="125" x="318.6501" y="80.1433">Use the computer</text><ellipse cx="381.1997" cy="200.2447" fill="\#FEFECE" filter="url(\#f1)" rx="67.1997" ry="25.7447" style="stroke: \#A80036; stroke-width: 1.5;"/><text fill="\#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacingAndGlyphs" textLength="92" x="335.1997" y="197.1755">«Secondary»</text><text fill="\#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacingAndGlyphs" textLength="87" x="337.6997" y="213.4724">Use the iPad</text><path d="M70.1964,59.12 C119.366,61.005 220.503,64.884 293.879,67.697 " fill="none" style="stroke: \#A80036; stroke-width: 1.0;"/><polygon fill="\#A80036" points="299.113,67.898,290.274,63.5538,294.1167,67.7051,289.9654,71.5478,299.113,67.898" style="stroke: \#A80036; stroke-width: 1.0;"/><text fill="\#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="43" x="164" y="56.0669">emacs</text><path d="M74.1941,203.2966 C119.916,202.4979 203.89,196.6318 268,167 C302.941,150.85 335.461,120.571 356.358,98.322 " fill="none" style="stroke: \#A80036; stroke-width: 1.0;"/><polygon fill="\#A80036" points="359.866,94.545,350.809,98.4143,356.4621,98.2074,356.6689,103.8605,359.866,94.545" style="stroke: \#A80036; stroke-width: 1.0;"/><text fill="\#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="92" x="139.5" y="162.0669">taobao, movie</text><path d="M70.2546,75.224 C80.6996,80.986 92.6849,87.166 104,92 C174.442,122.093 196.993,116.265 268,145 C291.336,154.4434 316.565,166.647 337.16,177.1588 " fill="none" style="stroke: \#A80036; stroke-width: 1.0;"/><polygon fill="\#A80036" points="341.75,179.5128,335.5667,171.8469,337.3008,177.2314,331.9164,178.9655,341.75,179.5128" style="stroke: \#A80036; stroke-width: 1.0;"/><text fill="\#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="161" x="105" y="87.0669">news, learning languages</text><path d="M74.125,216.9012 C83.6036,220.2342 94.0627,223.3148 104,225 C175.863,237.1866 195.55,232.9876 268,225 C285.318,223.0906 303.875,219.5683 320.802,215.7579 " fill="none" style="stroke: \#A80036; stroke-width: 1.0;"/><polygon fill="\#A80036" points="326,214.5675,316.3344,212.6767,321.1261,215.6832,318.1195,220.475,326,214.5675" style="stroke: \#A80036; stroke-width: 1.0;"/><text fill="\#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacingAndGlyphs" textLength="92" x="139.5" y="220.0669">taobao, movie</text></g></svg>
+</div>
+\end{HTML}
+
+
+\includegraphics[width=.9\linewidth]{/home/yuskam/Test/plantuml02.png}
+\end{document}

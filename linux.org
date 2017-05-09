@@ -9,7 +9,7 @@ Contoh ini akan kopi file ke folder =baru=. Sekirannya tidak wujud akan buat fol
 #+END_EXAMPLE
 
 Cara lain ialah dengan menggabungkan =mkdir= dan =cp=. Tambahan ~"$_"~ digunakan
-untuk memakai arahan =/foo/bar= semula
+untuk memakai arahan =/foo/bar= semula. =-p= untuk buat parent directory as needed
 #+BEGIN_EXAMPLE
 mkdir -p /foo/bar && cp myfile "$_"
 #+END_EXAMPLE
