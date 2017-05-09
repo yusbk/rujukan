@@ -24,8 +24,9 @@ graph graphname {
 #+RESULTS:
 [[file:~/Test/example1.png]]
 
--Kdot use dot layout. The other layouts you can try are Kneato, Kcirco, Ktwopi, Kfdp and Ksfdp for different layouts
--Tpng render as png
+- Kdot use dot layout. The other layouts you can try are Kneato, Kcirco, Ktwopi, Kfdp
+  and Ksfdp for different layouts. The command line for these can be found [[http://graphviz.org/content/command-line-invocation][here]]
+- Tpng render as png
 
 
 #+begin_src dot :file ~/Test/api2.png
