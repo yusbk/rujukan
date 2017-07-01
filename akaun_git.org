@@ -39,7 +39,7 @@ Contohnya
 #+BEGIN_EXAMPLE
 git checkout -b new_func_pc2 origin/func_pc1
 #+END_EXAMPLE
-* Kopi branch tertentu
+* Kopi branch tertentu cara lain
 Rujukan [[https://stackoverflow.com/questions/9537392/git-fetch-remote-branch][Stackoverflow]]
 
 You need to create a local branch that tracks a remote branch. The following command
