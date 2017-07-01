@@ -39,7 +39,13 @@ Contohnya
 #+BEGIN_EXAMPLE
 git checkout -b new_func_pc2 origin/func_pc1
 #+END_EXAMPLE
+* Tidak dapat kesan email
+Bila "unable to auto-detect email" tetapkan begini
 
+#+BEGIN_EXAMPLE
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+#+END_EXAMPLE
 * Pelbagai akaun
 
 Untuk membuat pelbagai *SSH* akaun sila rujuk [[https://gist.github.com/jexchan/2351996][Create mulitple SSH accounts]]
@@ -125,6 +131,20 @@ Untuk padamkan remote branch
 #+BEGIN_EXAMPLE
 git push origin --delete <nama branch>
 #+END_EXAMPLE
+* Kopi branch tertentu
+Rujukan [[https://stackoverflow.com/questions/9537392/git-fetch-remote-branch][Stackoverflow]]
+
+You need to create a local branch that tracks a remote branch. The following command
+will create a local branch named daves_branch, tracking the remote branch
+origin/daves_branch. When you push your changes the remote branch will be updated.
+
+#+BEGIN_EXAMPLE
+git checkout --track origin/daves_branch
+#+END_EXAMPLE
+
+=--track= is shorthand for =git checkout -b [branch] [remotename]/[branch]= where
+  [remotename] is origin in this case and [branch] is twice the same, daves_branch in
+  this case.
 * Git Aliases
 
 Git aliases yang selalu dipakai
