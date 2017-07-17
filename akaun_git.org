@@ -119,7 +119,19 @@ git commit -m "maklumat"
 git push -u origin-personal master
 #+END_EXAMPLE
 * Permission denied
-Sekiranya ~permission denied~ untuk repo gunakan user.name berlainan, boleh coba:
+Sekiranya ~permission denied~ bile =git push origin= untuk repo gunakan user.name berlainan contohnya:
+#+BEGIN_EXAMPLE
+  ERROR: Permission to user.ybk1/repo.git denied to user.ybk2.
+  fatal: The remote end hung up unexpectedly
+#+END_EXAMPLE
+
+Tukar user.name dengan apa yang sepatutnya... contohnya bila username work diperlukan
+dan yang sedang dipakai ialah personal maka tukar ke work seperti begini
+#+BEGIN_EXAMPLE
+  ssh-add ~/.ssh/id_rsa_work
+#+END_EXAMPLE
+
+Sekiranya tidak berhasil boleh coba cara dibawah:
 
 1. Pilihan 1:
 Periksa fail =~/.ssh/config= yang ~url~ adalah betul
