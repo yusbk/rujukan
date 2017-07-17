@@ -118,6 +118,28 @@ git add nama_fail
 git commit -m "maklumat"
 git push -u origin-personal master
 #+END_EXAMPLE
+* Permission denied
+Sekiranya ~permission denied~ untuk repo gunakan user.name berlainan, boleh coba:
+
+1. Pilihan 1:
+Periksa fail =~/.ssh/config= yang ~url~ adalah betul
+#+BEGIN_EXAMPLE
+  [remote "origin"]
+      fetch = +refs/heads/*:refs/remotes/origin/*
+      url = git@work:nama_github/nama_repo.git
+#+END_EXAMPLE
+
+Boleh juga masukkan di "command line" sebegini
+#+BEGIN_EXAMPLE
+  git remote set-url origin git@work:nama_github/nama_repo.git
+#+END_EXAMPLE
+
+2. Pilihan 2:
+Masukkan ~SSH~ semula di github. Tetapi sebelumnya harus buang ssh di cache dengan
+=ssh-add -D= kemudian boleh periksa key yang ada dengan =ssh-add -l=. Untuk memasukkan
+key-ssh, bukan fail cth =id_rsa_work.pub= dan kopi semua dan salin di Add-SSH di
+github.
+
 * Buat Repo melalui terminal
 
 Untuk buat repo kosong di Github sebelum memulakan projek perkongsian. =bare= harus
