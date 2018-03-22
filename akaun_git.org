@@ -264,3 +264,44 @@ git commit -m "fixed conflicts"
 git pull
 
 #+END_EXAMPLE
+* Release atau tag
+Cara biasa untuk buat tag dan masukkan maklumat ialah menggunakan =-a= /annotate/ dan
+=-m= /message/
+
+#+BEGIN_EXAMPLE
+git tag -a v0.1.2 -m "Version baru 0.1.2"
+#+END_EXAMPLE
+
+Bila sudah buat =tag= boleh lihat gunakan =git show v0.1.2= atau =git tag=. Sekiranya
+tidak ingin memasukkan sebarang maklumat dan hanya ingin membaharui versi sahaja,
+boleh guna:
+
+#+BEGIN_EXAMPLE
+git tag v0.1.2
+#+END_EXAMPLE
+
+Sekiranya ingin memasukkan =tag= di git yang sudah di merge, boleh mendapatkan nombor
+commit menggunakan log kemudian tag commit tersebut. Contohnya ingin masukkan tag di
+commit "Contoh penting".
+
+#+BEGIN_EXAMPLE
+$ git log --pretty=oneline
+15027957951b64cf874c3557a0f3547bd83b3ff6 Merge branch 'experiment'
+a6b4c97498bd301d84096da251c98a07c7723e65 Contoh penting
+0d52aaab4479697da7686c15f77a3d64d9165190 one more thing
+#+END_EXAMPLE
+
+Hanya sebahagian sahaja daripada nombor commit yang perlu bila di tag dan dipakai
+dipenghujung komandonya.
+
+#+BEGIN_EXAMPLE
+git tag -a v0.1.3 a6b4c9
+#+END_EXAMPLE
+
+Untuk dikongsikan di GitHub boleh dibuat seperti biasa dengan =push=
+
+#+BEGIN_EXAMPLE
+git push origin v0.1.2
+#+END_EXAMPLE
+
+Tetapi sekiranya ada banyak tag boleh pakai =git push --tags=
