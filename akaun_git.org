@@ -69,6 +69,33 @@ Bila "unable to auto-detect email" tetapkan begini
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 #+END_EXAMPLE
+* Buat kekunci SSH dan daftarkan di Github
+Untuk rujukan boleh dibaca di [[https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/][Github Help]].
+
+Sebagai ringkasan, caranya seperti dibawah:
+
+#+BEGIN_EXAMPLE
+  $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+#+END_EXAMPLE
+
+Ini akan membuat ssh menggunakan email sebagai label untuk rujukan. Sekiranya guna
+pelbagai git akaun, boleh tetapkan nama fail bila menetapkkan kekunci (/key/).
+
+#+BEGIN_EXAMPLE
+  Enter a file in which to save the key (/home/you/.ssh/id_rsa): /home/you/.ssh/id_sendiri
+#+END_EXAMPLE
+
+Untuk daftarkan di Github, perlu /login/ di akaun Github, kemudian kopi /public key/
+yang ditetapkan. Penggunaan program /xclip/ memudahkan untuk mengkopi kekunci SSH
+
+#+BEGIN_EXAMPLE
+  $ sudo apt-get install xclip
+  # Downloads and installs xclip. If you don't have `apt-get`, you might need to use another installer (like `yum`)
+
+  $ xclip -sel clip < ~/.ssh/id_rsa.pub
+  # Copies the contents of the id_rsa.pub file to your clipboard
+#+END_EXAMPLE
+
 * Pelbagai akaun
 
 Untuk membuat pelbagai *SSH* akaun sila rujuk [[https://gist.github.com/jexchan/2351996][Create mulitple SSH accounts]]
@@ -77,9 +104,9 @@ Contoh untuk buat =ssh-key=. Tetapkan kekunci utk personal dan kerja seperti dib
 dan biarkan kosong utk passphrase
 
 #+begin_example
-ssh-keygen -t rsa -C "your-email-here"
+$ ssh-keygen -t rsa b 4096 -C "your-email-here"
 
-Enter file in which to save the key (/Users/ra/.ssh/id_rsa): /home/yus/.ssh/id_rsa_work
+Enter file in which to save the key (/home/yourusername/.ssh/id_rsa): /home/yourusername/.ssh/id_rsa_work
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 #+end_example
@@ -89,10 +116,10 @@ Buka =id_rsa_work.pub= di gedit dan kopi kekunci untuk di masukkan ke Github SSH
 Kemudian daftarkan ssh-key
 
 #+begin_example
-ssh-add -K /path/to/private/key/file
+$ ssh-add -K /path/to/private/key/file
 #+end_example
 
-Untuk tambah di fail =.ssh/config= ialah
+Buat fail /config/ dan tambah di fail =.ssh/config= seperti dibawah
 
 #+BEGIN_EXAMPLE
 Host personal
