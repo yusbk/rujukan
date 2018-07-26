@@ -1,3 +1,4 @@
+
 ## Pakker som jeg trenger hvergang ny installasjon skal gjenomføres.
 ## Disse skal installeres om det ikke allerede gjort i folder "r-pakker"
 
@@ -8,5 +9,6 @@ load <- function(pkg){
   sapply(pkg, require, character.only = TRUE)
 }
 
-pakker <- c("knitr", "data.table", "ggplot2", "shiny", "shinydashboard")
+pakker <- c("knitr", "data.table", "ggplot2", "shiny", "shinydashboard", "DT", "kableExtra", "gridExtra")
 load(pakker)
+x
