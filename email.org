@@ -4,7 +4,8 @@ Rujukan utama di sini [[http://www.ict4g.net/adolfo/notes/2014/12/27/EmacsIMAP.h
 
 * Bagaimana prosesnya
 Untuk dapatkan idea bagaimana proses yang membolehkan bacaan dan penghantaran email ialah seperti dibawah:
-1. Salinkan email dari server ke lokal. Ini dihasilkan melalui [[http://isync.sourceforge.net/][isync]] atau ~offlineimpa~. Disini gunakan ~isync~
+1. Salinkan email dari server ke lokal. Ini dihasilkan melalui [[http://isync.sourceforge.net/][isync]] atau
+   ~offlineimpa~. Disini gunakan ~isync~ dan isync boleh dipasang menggunakan ~Synaptic~
 2. Letakkan indeks di email supaya mudah utk penyusunan dan pencarian. Terdapat
    banyak program yang boleh dipakai seperti ~notmuch~, ~mu~ atau ~mairix~. Disini [[http://www.djcbsoftware.nl/code/mu/][mu]] dipakai.
 3. Baca email dihasilkan melalui program [[http://www.djcbsoftware.nl/code/mu/mu4e.html][mu4e]] iaitu program yang termasuk dibawah ~mu~.
