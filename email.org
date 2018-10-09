@@ -30,14 +30,71 @@ Funksi-funksi yang dipakai:
    dilaksanakan secara manual.
 
 * mbsync
+Cara terbaik untuk pasang =mbsync= ialah dengan mengkompilasi sendiri dari GitHub di [[https://sourceforge.net/p/isync/isync/ci/master/tree/][sini]]. Selepas clone boleh larikan:
 
-Pasang =isync= yang juga memberikan pakej =mbsync=. Selain itu =maildir= dan =msmtp= juga perlu dipasang
+#+BEGIN_EXAMPLE
+  ./autogen.sh
+  ./configure
+  make
+  sudo make install
+#+END_EXAMPLE
 
-#+BEGIN_SRC sh
-  sudo apt-get install isync
-  sudo apt-get install maildir-utils
-  sudo apt-get install msmtp
-#+END_SRC
+Untuk penerangan terperinci boleh baca di [[https://cestlaz.github.io/posts/using-emacs-39-mu4e/#.W1z-tN9fg1k][blog]] ini.
+
+Sebelum masangan [[https://github.com/djcb/mu][mu]] untuk =mu4e=, program2 ini harus dipasang:
+
+#+BEGIN_EXAMPLE
+  $ sudo apt-get install libgmime-2.6-dev libxapian-dev
+
+  # optional
+  $ sudo apt-get install guile-2.0-dev html2text xdg-utils
+
+  # optional: only needed for msg2pdf and mug (toy gtk+ frontend)
+  $ sudo apt-get install libwebkit-dev
+#+END_EXAMPLE
+
+Penerangan ini diambil dari [[https://www.djcbsoftware.nl/code/mu/mu4e/Installation.html][sini]]. Selepas ini bolehlah memasang =mu= dari
+[[https://github.com/djcb/mu][GitHub]]. Pemasangannya juga sama seperti mbsync di atas.
+
+* smtpmail
+Untuk hantar email, pakai =smtpmail=. Sebelum pakai smtpmail, harus pasang
+=gnutls-bin= dengan ~sudo apt install gnutls-bin~. Program boleh dipasang dengan memuat turun di
+[[ftp://ftp.opaopa.org/pub/elisp/][sini]]. Kemudian pakai:
+
+#+BEGIN_EXAMPLE
+./configure
+make
+sudo make install
+#+END_EXAMPLE
+
+Untuk buang program ikut cara ini
+
+#+BEGIN_QUOTE
+You can remove the program binaries and object files from the
+source code directory by typing `make clean'.  To also remove the
+files that `configure' created (so you can compile the package for
+a different kind of computer), type `make distclean'.  There is
+also a `make maintainer-clean' target, but that is intended mainly
+for the package's developers.  If you use it, you may have to get
+all sorts of other programs in order to regenerate files that came
+with the distribution.
+#+END_QUOTE
+
+Aturcara utk smtpmail contohnya di [[https://gist.github.com/rwaweber/208fd02b7aeb6a37e831][sini]].
+
+#+BEGIN_EXAMPLE
+  (setq message-send-mail-function 'smtpmail-send-it
+        starttls-use-gnutls t
+        smtpmail-starttls-credentials
+        '(("smtp.gmail.com" 587 nil nil))
+        smtpmail-auth-credentials
+        (expand-file-name "~/.authinfo.gpg")
+        smtpmail-default-smtp-server "smtp.gmail.com"
+        smtpmail-smtp-server "smtp.gmail.com"
+        smtpmail-smtp-service 587
+        smtpmail-debug-info t)
+#+END_EXAMPLE
+
 * Guna GPG utk mbsync password
 Rujukan diambil dari [[http://www.macs.hw.ac.uk/~rs46/posts/2014-01-13-mu4e-email-client.html][R.Steward]]
 
@@ -57,8 +114,8 @@ Ini akan menghasilkan encrypted fail =mbsyncpass.gpg=. Simpan fail tersebut ke
 
 Buat fail sementara =.authinfo= dan masukkan informasi ini
 #+BEGIN_EXAMPLE
-  machine imap.gmail.com login MyAccountName@gmail.com password MYPASSWORD
-  machine smtp.gmail.com login MyAccountName@gmail.com password MYPASSWORD
+  machine imap.gmail.com login MyAccountName@gmail.com port 993 password MYPASSWORD
+  machine smtp.gmail.com login MyAccountName@gmail.com port 587 password MYPASSWORD
 #+END_EXAMPLE
 Tukar yang berkenaan cth ~MyAccountName~ dan ~MYPASSWORD~
 
