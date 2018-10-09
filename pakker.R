@@ -6,6 +6,8 @@ libssl-dev #for openssl
 libcurl4-openssl-dev #for libcurl
 libxml2-dev #for libxml-2.0
 
+## kjøre i terminal
+sudo apt install libssl-dev libcurl4-openssl-dev libxml2-dev
 
 ## Pakker som jeg trenger hvergang ny installasjon skal gjenomføres.
 ## Disse skal installeres om det ikke allerede gjort i folder "r-pakker"
