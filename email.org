@@ -57,10 +57,10 @@ Sebelum masangan [[https://github.com/djcb/mu][mu]] untuk =mu4e=, program2 ini h
 Penerangan ini diambil dari [[https://www.djcbsoftware.nl/code/mu/mu4e/Installation.html][sini]]. Selepas ini bolehlah memasang =mu= dari
 [[https://github.com/djcb/mu][GitHub]]. Pemasangannya juga sama seperti mbsync di atas.
 
-* smtpmail
+* smtpmail dan starttls
 Untuk hantar email, pakai =smtpmail=. Sebelum pakai smtpmail, harus pasang
 =gnutls-bin= dengan ~sudo apt install gnutls-bin~. Program boleh dipasang dengan memuat turun di
-[[ftp://ftp.opaopa.org/pub/elisp/][sini]]. Kemudian pakai:
+[[ftp://ftp.opaopa.org/pub/elisp/][starttls]]. Kemudian pakai:
 
 #+BEGIN_EXAMPLE
 ./configure
@@ -68,7 +68,7 @@ make
 sudo make install
 #+END_EXAMPLE
 
-Untuk buang program ikut cara ini
+Untuk buang program =starttls= ikut cara ini
 
 #+BEGIN_QUOTE
 You can remove the program binaries and object files from the
