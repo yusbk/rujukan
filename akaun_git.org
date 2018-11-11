@@ -353,7 +353,7 @@ Pakai option ~--orphan~ untuk buat root supaya tidak perlu sync dengan ~master~.
 
 Here, the intention is to create a branch for github pages, which is typically not
 associated with the history of your repo (master and other branches) and hence the
-usage of git symbolic-ref. This creates a "root branch", which is one without a
+usage of ~git checkout --orphan~ atau ~git symbolic-ref~. This creates a "root branch", which is one without a
 previous history.
 
 Why do we need to do all this, instead of just calling git branch gh-pages. Well, if
