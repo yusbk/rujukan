@@ -333,7 +333,7 @@ git push origin v0.1.2
 
 Tetapi sekiranya ada banyak tag boleh pakai =git push --tags=
 * Buat gh-page
-
+Pakai option ~--orphan~ untuk buat root supaya tidak perlu sync dengan ~master~.
 #+BEGIN_SRC sh
   # create gh-pages branch
   git checkout --orphan gh-pages
