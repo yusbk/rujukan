@@ -9,6 +9,32 @@ Untuk dapatkan idea bagaimana proses yang membolehkan bacaan dan penghantaran em
 2. Letakkan indeks di email supaya mudah utk penyusunan dan pencarian. Terdapat
    banyak program yang boleh dipakai seperti ~notmuch~, ~mu~ atau ~mairix~. Disini [[http://www.djcbsoftware.nl/code/mu/][mu]] dipakai.
 3. Baca email dihasilkan melalui program [[http://www.djcbsoftware.nl/code/mu/mu4e.html][mu4e]] iaitu program yang termasuk dibawah ~mu~.
+4. Buat folder 'Maildir' kemudian 'gmail' sekiranya akaun ingin dinamakan gmail.
+5. Berapa program perlu dipasang:
+
+#+BEGIN_EXAMPLE
+  sudo apt install gmime-3.0
+  sudo apt install libxapian-dev
+  sudo apt install texinfo texi2html
+#+END_EXAMPLE
+
+6. Sekiranya masalah untuk larikan ~./autogen.sh~ bila compile ~mu~, perlu pasang program:
+
+#+BEGIN_EXAMPLE
+  sudo install automake
+  ## atau ##
+  sudo apt-get install dh-autoreconf
+#+END_EXAMPLE
+
+- sudo apt install gnupg2 -y utk guna gpg2 encrypting
+- gpg2 --list-keys utk list semua keys
+- ~mbsync -c ~/.emacs.d/.mbsynrc gmail~ – utk download email di akaun ‘gmail’ atau ‘work’ sekiranya didaftarkan di mbsyncrc
+
+7. Sebelum email boleh dibaca selepas dimuatturun, harus di indeks-kan
+#+BEGIN_EXAMPLE
+  mu index --maildir=~/Maildir
+#+END_EXAMPLE
+
 
 Sekiranya ingin menggunakan pelbagai akaun email, pelbagai SMTP servers juga diperlukan. Proses seperti dibawah:
 1. Tulis email boleh gunakan mode tersedia cth mu4e.
@@ -56,6 +82,13 @@ Sebelum masangan [[https://github.com/djcb/mu][mu]] untuk =mu4e=, program2 ini h
 
 Penerangan ini diambil dari [[https://www.djcbsoftware.nl/code/mu/mu4e/Installation.html][sini]]. Selepas ini bolehlah memasang =mu= dari
 [[https://github.com/djcb/mu][GitHub]]. Pemasangannya juga sama seperti mbsync di atas.
+
+Untuk muatturn email larikan
+
+#+BEGIN_EXAMPLE
+  mbsync -c ~/.emacs.d/.mbsyncrc gmail  ;hanya untuk akaun gmail
+  mbsync -a ;untuk muatturun semua akaun
+#+END_EXAMPLE
 
 * smtpmail dan starttls
 Untuk hantar email, pakai =smtpmail=. Sebelum pakai smtpmail, harus pasang
