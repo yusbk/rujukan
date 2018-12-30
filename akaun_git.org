@@ -104,16 +104,17 @@ Contoh untuk buat =ssh-key=. Tetapkan kekunci utk personal dan kerja seperti dib
 dan biarkan kosong utk passphrase
 
 #+begin_example
-$ ssh-keygen -t rsa b 4096 -C "your-email-here"
+$ ssh-keygen -t rsa -b 4096 -C "your-email-here"
 
-Enter file in which to save the key (/home/yourusername/.ssh/id_rsa): /home/yourusername/.ssh/id_rsa_work
+Enter file in which to save the key (/home/yourusername/.ssh/id_rsa): /home/yourusername/.ssh/id_work
 Enter passphrase (empty for no passphrase):
 Enter same passphrase again:
 #+end_example
 
 Buka =id_rsa_work.pub= di gedit dan kopi kekunci untuk di masukkan ke Github SSH-key
 
-Kemudian daftarkan ssh-key
+Kemudian daftarkan ssh-key. *OBS!* Cara ini tidak dipakai dan hanya terus buat fail /config/
+untuk pelbagai akaun. Sekiranya tidak berhasil boleh cuba daftarkan ssh-key cara di bawah.
 
 #+begin_example
 $ ssh-add -K /path/to/private/key/file
