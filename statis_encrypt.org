@@ -1,0 +1,39 @@
+#+options: ':t *:t -:t ::t <:t H:3 \n:nil ^:nil arch:headline author:t
+#+options: broken-links:nil c:nil creator:nil d:(not "LOGBOOK") date:t e:t email:nil
+#+options: f:t inline:t num:t p:nil pri:nil prop:nil stat:t tags:t tasks:t tex:t
+#+options: timestamp:t title:t toc:t todo:t |:t
+#+title: statis_encrypt
+#+date: <2019-08-01 to.>
+#+author: Yusman Kamaleri
+#+email: yusbkam@gmail.com
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 25.2.1 (Org mode 9.2.4)
+* Static encryption
+
+Cara ini diambil dari [[https://github.com/robinmoisson/staticrypt/][GitHub]] robinmoisson. Boleh baca disitu untuk cara selanjutnya. Antaranya:
+** Satu fail
+Bila ingin encryp hanya satu fail HTML boleh larikan:
+
+#+BEGIN_SRC sh
+  staticrypt contoh.html mypassword
+#+END_SRC
+
+Komando ini akan menghasilkan fail HTML =contoh_encrypted.html=. Untuk option lainnya
+boleh dibaca di rujukan. Contohnya untuk bagi nama baru:
+
+#+BEGIN_SRC sh
+  staticrypt myfile.html mypassword -o "myfile_safe.html" -t "Tanya siapa?" -i "One click only"
+#+END_SRC
+
+Akan menghasilkan file baru yang bernama =myfile_safe.html= dan bila dibuka untuk
+login akan bertanjuk /Tanya siapa?/ dan di bawah tajuk tersebu tertulis /One click only/.
+** Satu folder
+Untuk encrypt semua HTML fail di satu folder boleh buat begini:
+
+#+BEGIN_SRC sh
+  find . -type f -name "*.html" -exec staticrypt {} mypassword \;
+#+END_SRC
+
+Semua fail-fail HTML di folder dimana komando dilarikan akan menjadi =namafile_encrypted.html=.
