@@ -38,6 +38,28 @@ Dan untuk fail =.credential= yang disimpan di folder =/etc=
   domain=fhi
 #+end_example
 
+Kemudian boleh berikan kebenaran ke fail:
+
+#+BEGIN_SRC sh
+  chmod 666 .credential
+#+END_SRC
+
+Sebagai rujukan =666= ialah semua boleh /read/ dan /write/.
+
+Permissions:
+1 – can execute
+2 – can write
+4 – can read
+
+The octal number is the sum of those free permissions, i.e.
+3 (1+2) – can execute and write
+6 (2+4) – can write and read
+
+Position of the digit in value:
+1 – what owner can
+2 – what users in the file group(class) can
+3 – what users not in the file group(class) can
+
 * SSH
 
 Utk pakai SSH atau TRAMP. Dapatkan public IP ke sini [[http://ifconfig.me][http://ifconfig.me]] atau
