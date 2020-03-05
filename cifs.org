@@ -1,0 +1,55 @@
+#+title: Access to F:
+* Autofs
+Guna *autofs*. Harus pasang. Caranya:
+
+#+BEGIN_SRC sh
+  apt install -y autofs cifs-utils
+  echo "/- /etc/auto.mounts" >> /etc/auto.master
+
+  cp auto.mounts /etc/auto.mounts
+
+  chmod 644 /etc/auto.master
+  chmod 644 /etc/auto.mounts
+
+#+END_SRC
+
+Aktifkan dengan melarikan
+
+#+BEGIN_SRC sh
+  sudo systemctl start autofs
+
+  # Atau
+  sudo systemctl enable autofs
+  sudo systemctl reload autofs
+  sudo systemctl restart autofs
+#+END_SRC
+* auto.mounts
+Fail =auto.mounts= mengandungi:
+
+#+begin_example
+  /f -fstype=cifs,rw,credentials=/etc/.credential,file_mode=0777,dir_mode=0777 ://fhi.no/Felles
+#+end_example
+
+Dan untuk fail =.credential= yang disimpan di folder =/etc=
+
+#+begin_example
+  username=username
+  password=xxxxx
+  domain=fhi
+#+end_example
+
+* SSH
+
+Utk pakai SSH atau TRAMP. Dapatkan public IP ke sini [[http://ifconfig.me][http://ifconfig.me]] atau
+larikan di terminal
+
+#+BEGIN_SRC sh
+  curl ifconfig.me
+#+END_SRC
+
+Kadang2 private dan public IP sama. Boleh la check kalau private IP sama dengan
+public IP. Utk dapatkan private IP
+
+#+BEGIN_SRC sh
+  hostname -I
+#+END_SRC
