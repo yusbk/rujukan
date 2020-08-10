@@ -1,0 +1,253 @@
+#+title: Webinar Javascript
+#+date: 10.08.2020
+
+* Info
+  Online event at meetup.com and the url is https://app.livestorm.co/lewagon/write-your-first-programs-with-javascript
+
+  Hosted by Agnieszka and Joanna Gaudyn
+
+* Basic JS
+  Website to test the script
+  https://jsbin.com
+
+** Data
+   Data types:
+   - Number : 3, 4.1
+   - String:
+   - Boolean : true, false
+   - Undefined and null - nothing else is also an info
+
+   How to use:
+   - Array :
+
+   #+begin_example
+     const names = ["Anna", "Erik", "John"];
+   #+end_example
+
+   - Object :
+
+   #+begin_example
+     const muscian = {
+       firstName: "John",
+       lastName: "Lennon"
+     };
+   #+end_example
+
+   Change object - get value
+
+   #+begin_example
+     muscician['firstName']
+     musician.firstName
+   #+end_example
+
+   got give new value
+
+   #+begin_example
+     musician.firstName = "Roald"
+   #+end_example
+
+   Variable
+
+   #+begin_example
+     const firstName = "John";
+   #+end_example
+
+   or use =let=
+
+   will be add more values to the object
+
+   #+begin_example
+     let newNum = 0;
+   #+end_example
+
+   To display a combined objects with =console.log()=
+
+   #+begin_example
+     const firstName = "Yusman";
+     const lastName = "Kamaleri";
+
+     const fullName = firstName + lastName;
+
+     console.log(fullName);
+   #+end_example
+** Conditions
+   If, else if or else
+
+   #+begin_example
+     if (condition) {
+       code if condition is true;
+     } else if (second condition) {
+       code if condition is true;
+     } else {
+       code if condition is false;
+     }
+   #+end_example
+
+   Boolean algebra
+
+   If one or the other is TRUE then the result TRUE, but if both FALSE then it's FALSE
+
+   #+begin_example
+     const result = a || b;
+   #+end_example
+
+   #+begin_example
+     const result = a && b;
+     const result = !a;
+   #+end_example
+
+   Exercise - Figure out if string start with C or not.
+
+   #+begin_example
+     // variable is name
+     const name = "Charmaine";
+
+     if (name.startsWith("C")) {
+       console.log(name + " starts with a C");
+     } else {
+       console.log(name + " doesn't start with a C")
+     }
+   #+end_example
+** Loop and Iteration
+
+   =for loop=
+
+   Here when starting start with 1 and loop it and plus it with 1 everytime until it reach to 10
+   #+begin_example
+     for (i = 1; i <= 10; i++) {
+       console.log(i);
+     };
+   #+end_example
+
+
+   =for each=
+   #+begin_example
+
+     const names = ["Anna","Erik", "John"]
+
+     names.forEach((name) => {
+       // what to do for each name of the array
+       console.log(name);
+     });
+
+
+     name.forEach((name) => {
+       if (name.startWith("A")) {
+         console.log(name + " start with an A");
+       } else {
+         console.log(name + " don't start with A")
+       }
+     });
+   #+end_example
+** Function
+
+   #+begin_example
+     const functionName = (parameter) => {
+       write your code;
+       return value for code execution;
+     };
+   #+end_example
+
+   Example:
+
+   #+begin_example
+     const name = "maRia"
+
+     // to get the index later of name - 0 mean to get the first letter
+     console.log(name[0]);
+
+     // get the rest of the word without first letter
+     console.log(name.substring(1), name[0])
+   #+end_example
+
+   Capitalize the string
+
+   #+begin_example
+     const capitalize = (word) => {
+       //return capitalized version of string
+       const firstLetter = word[0].toUpperCase();
+       const restOfTheWord = word.string(1).toLowerCase();
+       const capitalizedWord = firstLetter + restOfTheWord;
+       return capitalizedWord;
+
+     }
+
+     // to display the result of the function
+     console.log(capitalize(name));
+   #+end_example
+** DOM
+   The snapshot from a website that placed locally - Document Object Model
+
+   Structure:
+   - HTML Tree : head, body etc..
+*** Interacting with DOM
+    In Webbrowser - F12 or inspect
+    Use =Console= to interact with JavaScript
+
+    Select what element to change eg. "h1:
+
+    #+begin_example
+      document.querySelector("h1");
+
+      //To change the content of element
+      header.innerText = "Hello world"
+    #+end_example
+
+    html tag = p
+    CSS = .tag-name
+    ID = #id
+
+    Change an element
+
+    #+begin_example
+      element.classList.add("class");
+
+      element.classList.remove("class");
+
+      //to show or hide
+      element.classList.toggle("class");
+
+      //other options
+      element.innerText = "Change text";
+
+      // to hide the style
+      element.style.display = "none";
+    #+end_example
+*** Event handling
+
+    #+begin_example
+      document.addEventListener(? , ?);
+    #+end_example
+
+    Listen to whatever the user is doing. Here is user clicks then show "Clicked!" in console
+
+    #+begin_example
+      head.addEventListener("click", () => {
+        // code that will run when the use clicks the header
+        console.log("Clicked!");
+      });
+    #+end_example
+
+    Select an element ie. "h1" first then manipulate the DOM to change the text to "Hello world!"
+
+    So the steps:
+    1. Select element to manipulate
+    2. Listen the event to execute
+    3. Do the manipulation when the event is taken place ie. "click"
+
+    #+begin_example
+      const header = document.querySelector("h1")
+
+      //what event to listen to is "click"
+      header.addEventListener("click", () => {
+        header.innerText = "Hello world!";
+      });
+    #+end_example
+**** Type events
+     Lots of events in JavaScript among others include:
+   - blur
+   - click
+   - focus
+   - keyup  : key pressing
+   - scroll
+   - submit : for form
