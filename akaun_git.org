@@ -375,3 +375,15 @@ Cara lama pakai ~git symbolic-ref~
   git commit -a -m "First pages commit"
   git push origin gh-pages
 #+END_SRC
+* git config
+Ada dua jenis =config= untuk git, iaitu =--local= dan =--global=. Fail untuk local ialah project =.git=
+folder manakala untuk global di =~/.gitconfig=. Contoh isi fail config global ialah:
+
+#+begin_example
+  [user]
+     name = Yusman Kamaleri
+     email = ybkamaleri@gmail.com
+
+  [diff]
+     ignoreSubmodules = dirty
+#+end_example
