@@ -4,6 +4,12 @@
 
 #+options: toc:nil
 
+* Global setting
+Tetapkan email dan nama di global.
+
+git config --global user.email "your@email.com"
+git config --global user.name "Your name"
+
 * Buat git repo dan R pakej
 
 Langkah-langkah untuk buat R pakej dan kemudiannya menghantar ke Github
@@ -188,6 +194,15 @@ Masukkan ~SSH~ semula di github. Tetapi sebelumnya harus buang ssh di cache deng
 =ssh-add -D= kemudian boleh periksa key yang ada dengan =ssh-add -l=. Untuk memasukkan
 key-ssh, bukan fail cth =id_rsa_work.pub= dan kopi semua dan salin di Add-SSH di
 github.
+
+* ssh-agent refused operation
+Ini disebabkan file permission. Tukarkan ke 600
+
+#+BEGIN_EXAMPLE
+  chmod 600 ~/.ssh/id_rsa_personal
+  chmod 600 ~/.ssh/*
+#+END_EXAMPLE
+Cara kedua itu ialah bila ingin tukarkan permission untuk semua fail-fail di folder =.ssh=.
 
 * Buat Repo melalui terminal
 
