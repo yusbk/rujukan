@@ -6,9 +6,10 @@
 
 * Global setting
 Tetapkan email dan nama di global.
-
+#+BEGIN_EXAMPLE
 git config --global user.email "your@email.com"
 git config --global user.name "Your name"
+#+END_EXAMPLE
 
 * Buat git repo dan R pakej
 
