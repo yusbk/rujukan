@@ -186,7 +186,7 @@ git remote set-url origin git@work:GitHubUserName/YouRepoName.git
 #+end_example
 
 
-1. Pilihan 1:
+2. Pilihan 2:
 Periksa fail =~/.ssh/config= yang ~url~ adalah betul
 #+BEGIN_EXAMPLE
   [remote "origin"]
@@ -199,7 +199,7 @@ Boleh juga masukkan di "command line" sebegini
   git remote set-url origin git@work:nama_github/nama_repo.git
 #+END_EXAMPLE
 
-2. Pilihan 2:
+3. Pilihan 3:
 Masukkan ~SSH~ semula di github. Tetapi sebelumnya harus buang ssh di cache dengan
 =ssh-add -D= kemudian boleh periksa key yang ada dengan =ssh-add -l=. Untuk memasukkan
 key-ssh, bukan fail cth =id_rsa_work.pub= dan kopi semua dan salin di Add-SSH di
