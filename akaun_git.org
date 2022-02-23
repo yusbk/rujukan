@@ -178,6 +178,15 @@ dan yang sedang dipakai ialah personal maka tukar ke work seperti begini
 Sekiranya tidak berhasil boleh coba cara dibawah:
 
 1. Pilihan 1:
+Diambil dari [[https://stackoverflow.com/questions/59621263/permission-denied-with-mutiple-github-accounts][StackOverflow]].
+Daftarkan semula
+
+#+begin_example
+git remote set-url origin git@work:GitHubUserName/YouRepoName.git
+#+end_example
+
+
+1. Pilihan 1:
 Periksa fail =~/.ssh/config= yang ~url~ adalah betul
 #+BEGIN_EXAMPLE
   [remote "origin"]
