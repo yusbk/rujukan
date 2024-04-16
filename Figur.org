@@ -147,6 +147,27 @@ Letakkan =:cmdline -E= untuk sambungkan dua kotak
 
 #+RESULTS:
 [[file:~/Test/fancy-ditaa2.png]]
+* TiKz
+
+Some guides to use with **org-mode** can be found here [[https://www.homepages.ucl.ac.uk/~ucahjde/blog/tikz.html][here]] or [[https://gist.github.com/RyanGreenup/79a8eb780ff958267730c7e5845f1045][here]]
+
+#+LATEX_HEADER: \usepackage{svg}
+#+LATEX_HEADER: \usepackage{tikz}
+
+#+NAME: tikz-eg-oneline
+#+CAPTION: How to produce Tikz in Org-mode
+
+#+HEADER: :exports results
+#+HEADER: :imagemagick yes
+#+HEADER: :results output graphics file
+#+HEADER: :file contour.svg
+#+BEGIN_SRC latex
+\begin{tikzpicture}
+\draw[->] (-3,0) -- (-2,0) arc[radius=0.5cm,start angle=-180,end angle=0] (-1,0) -- (1,0) arc[radius=0.5cm,start angle=180,end angle=0] (2,0) -- (3,0);
+\filldraw (-1.5,0) circle[radius=1mm];
+\filldraw (1.5,0) circle[radius=1mm];
+\end{tikzpicture}
+#+END_src
 
 * Plantuml
 
