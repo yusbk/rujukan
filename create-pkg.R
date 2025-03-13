@@ -231,6 +231,10 @@ git push origin gh-pages
 ## Then change GitHub Pages to gh-pages if it was /docs folder before
 ## source https://sahirbhatnagar.com/blog/2020/03/03/creating-a-website-for-your-r-package/
 
+### TESTING
+## Github-Action
+## lots of nice examples here https://github.com/r-lib/actions/tree/old/examples
+
 
 ### TEST package
 ## -------------
