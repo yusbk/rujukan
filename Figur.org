@@ -11,7 +11,7 @@ Untuk bantuan buat kotak2 lebih cepat. =Artist mode= diaktivkan di Org bila masu
 Tekan butang tengah di tetikus utk dapatkan pilihan cth kotak, garis dll
 
 * Basic Dot
-[[https://www.howtoinstall.co/en/ubuntu/xenial/graphviz][Graphviz]] harus dipasang terlebih dahulu. Lihat di [[http://www.tonyballantyne.com/graphs.html#sec-2-1][cara pakai dot]]
+[[https://graphviz.org/download/][Graphviz]] harus dipasang terlebih dahulu. Lihat di [[http://www.tonyballantyne.com/graphs.html#sec-2-1][cara pakai dot]]
 #+begin_src dot :file ~/Test/example1.png :cmdline -Kdot -Tpng
 graph graphname {
                 a -- b;
