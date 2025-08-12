@@ -1,0 +1,20 @@
+#+title: Tips for Doom
+
+# ESS
+When you update R version, ESS may not pick the newest verion of your R. Try to update the =env= in terminal
+
+#+begin_example
+doom env
+#+end_example
+
+To check if Emacs finds your R executable file, run in Emacs:
+
+#+begin_example
+(executable-find "R")
+#+end_example
+
+If it returns nil, Emacs can't find R in its exec-path. You can fix this by adding the R binary directory to exec-path:
+
+#+begin_example
+(add-to-list 'exec-path "/usr/local/bin")
+#+end_example
