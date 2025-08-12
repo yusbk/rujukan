@@ -1,6 +1,6 @@
 #+title: Tips for Doom
 
-# ESS
+* ESS
 When you update R version, ESS may not pick the newest verion of your R. Try to update the =env= in terminal
 
 #+begin_example
