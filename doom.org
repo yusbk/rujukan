@@ -9,9 +9,12 @@ doom env
 
 To check if Emacs finds your R executable file, run in Emacs:
 
-#+begin_example
+#+begin_src emacs-lisp :tangle yes
 (executable-find "R")
-#+end_example
+#+end_src
+
+#+RESULTS:
+: c:/Program Files/R/R-4.5.1/bin/x64/R.exe
 
 If it returns nil, Emacs can't find R in its exec-path. You can fix this by adding the R binary directory to exec-path:
 
